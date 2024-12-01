@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', monospace;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Search Bar and Theme Toggle */
+.search-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+body.dark-mode .search-bar {
+    border-color: #fff;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Button Styles */
+button, input {
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+body.dark-mode button,
+body.dark-mode input {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 12px;
+    margin-left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+body.dark-mode #themeToggle {
+    background-color: #333;
+    border: 2px solid #fff ;
+    color: #fff;
+}
+
+/* Task List Styling */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.task span {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Button to Add Task */
+.button-1 {
+    background-color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Styles */
+#addTaskModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode #addTaskModal {
+    border: 2px solid #fff;
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode #addTaskModal input,
+body.dark-mode #addTaskModal button {
+    border: 2px solid #fff;
+}
+
+body.dark-mode #overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
