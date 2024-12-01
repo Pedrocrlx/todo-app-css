@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO List App</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <header>
+      <h1>TODO LIST APP</h1>
+    </header>
+    
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+
+    <section class="search-bar-container">
+      <input type="text" class="search-bar" id="searchInput" placeholder="Search tasks..." oninput="filterTasks()">
+      <button id="themeToggle">Dark Mode</button>
+    </section>
+
+    <ul id="taskList"></ul>
+    
+    <section>
+      <button class="button-1" id="addTaskBtn" aria-label="Add Task">+</button>
+    </section>
+
+    <!-- Modal for Adding Tasks -->
+    <div id="overlay" class="overlay"></div>
+    <div id="addTaskModal" class="modal">
+      <form id="taskForm">
+        <h2>Add Task</h2>
+        <input type="text" id="taskInput" placeholder="Enter a task" required>
+        <br><br>
+        <button type="submit">Add Task</button>
+        <button type="button" id="closeModalBtn" aria-label="Close Modal">Cancel</button>
+      </form>
+    </div>
+
+    <script src="be/app.js"></script>
+  </body>
+</html>
